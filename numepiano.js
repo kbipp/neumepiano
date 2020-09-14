@@ -16,7 +16,7 @@ const NumePiano = (() => {
   const DEFAULT_OCTAVE = 4;
 
   function registerClickListeners() {
-    const numeButtons = document.getElementsByClassName('numeButton');
+    const numeButtons = document.querySelectorAll('input[type="image"]');
     const transposeAmount = document.getElementById('transpose');
 
     for (let i = 0; i < numeButtons.length; i++) {
