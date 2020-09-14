@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title>NumePiano</title>
+  <script src="lib/audiosynth.js"></script>
+  <script src="numepiano.js"></script>
+</head>
+
+<body>
+  <div>
+    <!-- Clefs -->
+    <input type="radio" name="clef" id="do" value="do" checked>
+    <label for="do">Do Clef</label>
+    <input type="radio" name="clef" id="fa" value="fa">
+    <label for="fa">Fa Clef</label>
+
+    <!-- Lines -->
+    <input type="radio" name="line" id="line2" value="2" checked>
+    <label for="line2">Line 2</label>
+    <input type="radio" name="line" id="line3" value="3">
+    <label for="line3">Line 3</label>
+    <input type="radio" name="line" id="line4" value="4">
+    <label for="line4">Line 4</label>
+  </div>
+
+  <!-- Numes -->
+  <div>
+    <button id="nume0" class="numeButton" value="0">0</button>
+    <button id="nume1" class="numeButton" value="1">1</button>
+    <button id="nume2" class="numeButton" value="2">2</button>
+    <button id="nume3" class="numeButton" value="3">3</button>
+    <button id="nume4" class="numeButton" value="4">4</button>
+    <button id="nume5" class="numeButton" value="5">5</button>
+    <button id="nume6" class="numeButton" value="6">6</button>
+    <button id="nume7" class="numeButton" value="7">7</button>
+    <button id="nume8" class="numeButton" value="8">8</button>
+    <button id="nume9" class="numeButton" value="9">9</button>
+    <button id="nume10" class="numeButton" value="10">10</button>
+    <button id="nume11" class="numeButton" value="11">11</button>
+    <button id="nume12" class="numeButton" value="12">12</button>
+  </div>
+  <div>Note played: <span id="notePlayed">?</span></div>
+
+  <!-- Transpose -->
+  <div>
+    <label for="transpose">Transpose</label>
+    <button id="transposeDown">-</button>
+    <input type="number" name="transpose" id="transpose" value="0">
+    <button id="transposeUp">+</button>
+  </div>
+</body>
+
+</html>
