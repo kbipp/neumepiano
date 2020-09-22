@@ -39,7 +39,7 @@ const NumePiano = (() => {
 
     const octaveAdjustment = Math.floor((noteIndex + amount) / NOTES.length);
     const newIndex = (noteIndex + amount) % NOTES.length;
-    return [NOTES[newIndex], octaveAdjustment];
+    return [NOTES[newIndex < 0 ? (newIndex + NOTES.length) : newIndex], octaveAdjustment];
   }
 
   function playNume(nume, isDoClef, line, transposeAmount = 0) {
