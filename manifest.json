@@ -4,11 +4,10 @@
   "background_color": "#2196f3",
   "display": "standalone",
   "orientation": "landscape",
-  "scope": "/",
   "start_url": "https://kbipp.github.io/neumepiano/",
   "icons": [
     {
-      "src": "img/icon-512x512.jpg",
+      "src": "./img/icon-512x512.jpg",
       "sizes": "512x512",
       "type": "image/jpg"
     }
