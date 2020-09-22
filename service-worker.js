@@ -20,11 +20,17 @@ const staticAssets = [
   './img/neume_12.png',
 ];
 
+async function cacheFirst(req) {
+  const cache = await caches.open(cacheName);
+  const cachedResponse = await cache.match(req);
+  return cachedResponse || fetch(req);
+}
+
 self.addEventListener('install', async event => {
   const cache = await caches.open(cacheName);
   await cache.addAll(staticAssets);
 });
 
 self.addEventListener('fetch', async event => {
-  console.log('fetch');
+  event.respondWith(cacheFirst(event.request));
 });
