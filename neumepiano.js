@@ -60,7 +60,8 @@ const NeumePiano = (() => {
   async function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
       try {
-        await navigator.serviceWorker.register('./serviceWorker.js');
+        await navigator.serviceWorker.register('service-worker.js');
+        console.log('Service worker registration succeeded!');
       } catch (e) {
         console.error(`ServiceWorker registration failed: ${e}`);
       }
